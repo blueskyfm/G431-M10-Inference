@@ -1,0 +1,3 @@
+# Required by the two emulation scripts. Builder uses only Python's standard library.
+# Compatibility range; original exact version is not documented in the bundle.
+unicorn>=2.0,<3.0

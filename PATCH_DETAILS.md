@@ -1,5 +1,7 @@
 # Scope of the PciBus change
 
+This is the firmware stage of [G431-M10-Inference](README.md#from-boot-to-inference). It addresses a PCI-enumeration hypothesis; CUDA validation and model serving are separate stages documented in [current results](TEST_RESULTS.md).
+
 The builder accepts only a PE module with SHA-256 f252384354d29c590f6e846b2b36326970057f440575e0ae49e639dbcf852fc0 and the embedded layout checks. All offsets below refer to that module, not the complete BIOS image.
 
 It copies the 16 existing 40-byte resource-exception records from offset 0x12a10 into an extended final .reloc section and appends one record. The appended record uses action 3, vendor 0x10de, device 0x13bd, mask 0xffff, kind 11 and BAR register 0x24. These field interpretations are specific to the investigated AMI implementation.

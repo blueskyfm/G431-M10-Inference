@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+credentials/
+*api-key*
+*.gguf
+*.RBU
+*.bin
+*.part
+*.ranges*

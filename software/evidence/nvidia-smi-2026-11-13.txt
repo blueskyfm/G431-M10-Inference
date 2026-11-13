@@ -1,0 +1,159 @@
+Fri Nov 13 16:17:45 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla M10                      On  |   00000000:09:00.0 Off |                  N/A |
+| N/A   27C    P8              8W /   53W |    3778MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  Tesla M10                      On  |   00000000:0A:00.0 Off |                  N/A |
+| N/A   27C    P8              8W /   53W |    3901MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  Tesla M10                      On  |   00000000:0B:00.0 Off |                  N/A |
+| N/A   16C    P8              8W /   53W |    5553MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  Tesla M10                      On  |   00000000:0C:00.0 Off |                  N/A |
+| N/A   19C    P8              8W /   53W |    5974MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   4  Tesla M10                      On  |   00000000:0F:00.0 Off |                  N/A |
+| N/A   28C    P8              8W /   53W |    4290MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   5  Tesla M10                      On  |   00000000:10:00.0 Off |                  N/A |
+| N/A   28C    P8              8W /   53W |    3580MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   6  Tesla M10                      On  |   00000000:11:00.0 Off |                  N/A |
+| N/A   17C    P8              8W /   53W |    3933MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   7  Tesla M10                      On  |   00000000:12:00.0 Off |                  N/A |
+| N/A   19C    P8              8W /   53W |    3901MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   8  Tesla M10                      On  |   00000000:19:00.0 Off |                  N/A |
+| N/A   22C    P8              8W /   53W |    2965MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   9  Tesla M10                      On  |   00000000:1A:00.0 Off |                  N/A |
+| N/A   23C    P8              8W /   53W |    5553MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  10  Tesla M10                      On  |   00000000:1B:00.0 Off |                  N/A |
+| N/A   15C    P8              8W /   53W |    3580MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  11  Tesla M10                      On  |   00000000:1C:00.0 Off |                  N/A |
+| N/A   18C    P8              8W /   53W |    4290MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  12  Tesla M10                      On  |   00000000:1F:00.0 Off |                  N/A |
+| N/A   25C    P8              8W /   53W |    5974MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  13  Tesla M10                      On  |   00000000:20:00.0 Off |                  N/A |
+| N/A   27C    P8              8W /   53W |    3901MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  14  Tesla M10                      On  |   00000000:21:00.0 Off |                  N/A |
+| N/A   16C    P8              8W /   53W |    3580MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  15  Tesla M10                      On  |   00000000:22:00.0 Off |                  N/A |
+| N/A   18C    P8              8W /   53W |    5148MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  16  Tesla M10                      On  |   00000000:25:00.0 Off |                  N/A |
+| N/A   30C    P8              8W /   53W |    5974MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  17  Tesla M10                      On  |   00000000:26:00.0 Off |                  N/A |
+| N/A   31C    P8              8W /   53W |    2965MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  18  Tesla M10                      On  |   00000000:27:00.0 Off |                  N/A |
+| N/A   19C    P8              8W /   53W |    3933MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  19  Tesla M10                      On  |   00000000:28:00.0 Off |                  N/A |
+| N/A   24C    P8              8W /   53W |    5148MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  20  Tesla M10                      On  |   00000000:2B:00.0 Off |                  N/A |
+| N/A   25C    P8              8W /   53W |    5553MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  21  Tesla M10                      On  |   00000000:2C:00.0 Off |                  N/A |
+| N/A   24C    P8              8W /   53W |    5148MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  22  Tesla M10                      On  |   00000000:2D:00.0 Off |                  N/A |
+| N/A   17C    P8              8W /   53W |    5148MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|  23  Tesla M10                      On  |   00000000:2E:00.0 Off |                  N/A |
+| N/A   19C    P8              8W /   53W |    5148MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|    0   N/A  N/A            8532      C   ...10/usr/local/bin/llama-server       3738MiB |
+|    1   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|    1   N/A  N/A            7618      C   ...10/usr/local/bin/llama-server       3861MiB |
+|    2   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|    2   N/A  N/A            7043      C   ...10/usr/local/bin/llama-server       5516MiB |
+|    3   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|    3   N/A  N/A            7081      C   ...10/usr/local/bin/llama-server       5935MiB |
+|    4   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|    4   N/A  N/A            8272      C   ...10/usr/local/bin/llama-server       4252MiB |
+|    5   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|    5   N/A  N/A            7116      C   ...10/usr/local/bin/llama-server       3541MiB |
+|    6   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|    6   N/A  N/A            4191      C   ...10/usr/local/bin/llama-server       3896MiB |
+|    7   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|    7   N/A  N/A            7642      C   ...10/usr/local/bin/llama-server       3861MiB |
+|    8   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|    8   N/A  N/A            8829      C   ...10/usr/local/bin/llama-server       2928MiB |
+|    9   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|    9   N/A  N/A            7153      C   ...10/usr/local/bin/llama-server       5516MiB |
+|   10   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   10   N/A  N/A            7183      C   ...10/usr/local/bin/llama-server       3541MiB |
+|   11   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   11   N/A  N/A            8293      C   ...10/usr/local/bin/llama-server       4252MiB |
+|   12   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   12   N/A  N/A            4517      C   ...10/usr/local/bin/llama-server       5935MiB |
+|   13   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   13   N/A  N/A            7746      C   ...10/usr/local/bin/llama-server       3861MiB |
+|   14   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   14   N/A  N/A            4703      C   ...10/usr/local/bin/llama-server       3541MiB |
+|   15   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   15   N/A  N/A            7214      C   ...10/usr/local/bin/llama-server       5109MiB |
+|   16   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   16   N/A  N/A            4965      C   ...10/usr/local/bin/llama-server       5935MiB |
+|   17   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   17   N/A  N/A            8850      C   ...10/usr/local/bin/llama-server       2928MiB |
+|   18   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   18   N/A  N/A            7244      C   ...10/usr/local/bin/llama-server       3896MiB |
+|   19   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   19   N/A  N/A            5139      C   ...10/usr/local/bin/llama-server       5109MiB |
+|   20   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   20   N/A  N/A            7346      C   ...10/usr/local/bin/llama-server       5516MiB |
+|   21   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   21   N/A  N/A            7372      C   ...10/usr/local/bin/llama-server       5109MiB |
+|   22   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   22   N/A  N/A            7412      C   ...10/usr/local/bin/llama-server       5109MiB |
+|   23   N/A  N/A            1467      C   ...h/unsloth-m10/venv/bin/python         31MiB |
+|   23   N/A  N/A            7437      C   ...10/usr/local/bin/llama-server       5109MiB |
++-----------------------------------------------------------------------------------------+

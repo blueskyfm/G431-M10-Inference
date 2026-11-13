@@ -1,0 +1,105 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "m10quorum/quorum-fast",
+  "small_model": "m10quorum/quorum-fast",
+  "compaction": {
+    "auto": false
+  },
+  "providers": {
+    "m10quorum": {
+      "name": "M10 Quorum - serveur 189",
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "http://SERVER_IP:9000/v1",
+        "apiKey": "{file:~/.config/opencode/m10-api-key}",
+        "timeout": 300000,
+        "encoding": "none"
+      },
+      "models": {
+        "quorum": {
+          "name": "Quorum - routage automatique",
+          "limit": {
+            "context": 8192,
+            "input": 6144,
+            "output": 1024
+          },
+          "capabilities": {
+            "tools": false,
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "quorum-fast": {
+          "name": "Quorum - un expert, rapide",
+          "limit": {
+            "context": 8192,
+            "input": 6144,
+            "output": 1024
+          },
+          "capabilities": {
+            "tools": false,
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "quorum-deep": {
+          "name": "Quorum - revue complete, lente",
+          "limit": {
+            "context": 8192,
+            "input": 6144,
+            "output": 1024
+          },
+          "capabilities": {
+            "tools": false,
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "default_agent": "m10-chat",
+  "agents": {
+    "m10-chat": {
+      "mode": "primary",
+      "description": "Dialogue technique local avec le quorum M10",
+      "system": "Tu es un assistant technique. Réponds directement dans la langue de la question. Sois précis et concis. Signale les incertitudes et ne prétends pas avoir exécuté des outils.",
+      "permissions": [
+        {
+          "action": "tool.use",
+          "resource": "*",
+          "effect": "deny"
+        }
+      ]
+    }
+  },
+  "experimental": {
+    "policies": [
+      {
+        "action": "tool.use",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "skill.use",
+        "resource": "*",
+        "effect": "deny"
+      }
+    ]
+  },
+  "tools": {
+    "*": false
+  }
+}

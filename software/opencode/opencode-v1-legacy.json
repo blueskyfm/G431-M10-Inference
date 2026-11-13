@@ -1,0 +1,205 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "m10quorum/quorum",
+  "provider": {
+    "m10quorum": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "M10 Quorum (one model per GPU)",
+      "options": {
+        "baseURL": "http://SERVER_IP:9000/v1",
+        "apiKey": "{file:~/.config/opencode/m10-api-key}"
+      },
+      "models": {
+        "quorum": {
+          "name": "Adaptive review",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "quorum-fast": {
+          "name": "One selected expert",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "quorum-deep": {
+          "name": "All loaded experts + synthesis",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-0": {
+          "name": "Qwen - technical lead and architecture",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-1": {
+          "name": "Phi - Python and backend development",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-2": {
+          "name": "Mistral - Linux administration",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-3": {
+          "name": "Llama - network engineering",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-4": {
+          "name": "Granite - SQL and database design",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-5": {
+          "name": "Gemma - application security review",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-6": {
+          "name": "Qwen - debugging and root cause analysis",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-7": {
+          "name": "Phi - tests and edge cases",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-8": {
+          "name": "Nemotron - distributed systems",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-9": {
+          "name": "Mistral - APIs and protocol design",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-10": {
+          "name": "Gemma - performance and capacity planning",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-11": {
+          "name": "Granite - reliability and observability",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-12": {
+          "name": "Llama - software design review",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-13": {
+          "name": "Phi - C/C++ and systems programming",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-14": {
+          "name": "Gemma - technical documentation and clarity",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-15": {
+          "name": "SynLogic - algorithms and mathematical checks",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-16": {
+          "name": "Llama - architecture alternatives and tradeoffs",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-17": {
+          "name": "Nemotron - concurrency and memory safety",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-18": {
+          "name": "Qwen - requirements and consistency review",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-19": {
+          "name": "DeepSeek - independent logical critique",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-20": {
+          "name": "Mistral - storage and data integrity",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-21": {
+          "name": "DeepSeek - deployment and containers",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-22": {
+          "name": "SynLogic - technical fact checking and uncertainty",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        },
+        "expert-23": {
+          "name": "DeepSeek - adversarial review of proposed solutions",
+          "limit": {
+            "context": 8192,
+            "output": 1024
+          }
+        }
+      }
+    }
+  }
+}

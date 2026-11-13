@@ -1,0 +1,244 @@
+{
+  "experts": [
+    {
+      "id": "expert-0",
+      "gpu": 0,
+      "card_group": 0,
+      "file": "Qwen3-4B-Instruct-2507-UD-Q4_K_XL.gguf",
+      "role": "technical lead and architecture",
+      "server_id": "expert-0-architecture",
+      "family": "Qwen",
+      "reasoning": false
+    },
+    {
+      "id": "expert-1",
+      "gpu": 1,
+      "card_group": 0,
+      "file": "Phi-4-mini-instruct-Q4_K_M.gguf",
+      "role": "Python and backend development",
+      "server_id": "expert-1-phi-python",
+      "family": "Phi",
+      "reasoning": false
+    },
+    {
+      "id": "expert-2",
+      "gpu": 2,
+      "card_group": 0,
+      "file": "Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
+      "role": "Linux administration",
+      "server_id": "expert-2-mistral-linux",
+      "family": "Mistral",
+      "reasoning": false
+    },
+    {
+      "id": "expert-3",
+      "gpu": 3,
+      "card_group": 0,
+      "file": "Llama-3.1-8B-Instruct-UD-Q4_K_XL.gguf",
+      "role": "network engineering",
+      "server_id": "expert-3-llama-reseau",
+      "family": "Llama",
+      "reasoning": false
+    },
+    {
+      "id": "expert-4",
+      "gpu": 4,
+      "card_group": 1,
+      "file": "granite-4.0-h-tiny-Q4_K_M.gguf",
+      "role": "SQL and database design",
+      "server_id": "expert-4-granite-bases-donnees",
+      "family": "Granite",
+      "reasoning": false
+    },
+    {
+      "id": "expert-5",
+      "gpu": 5,
+      "card_group": 1,
+      "file": "gemma-3-4b-it-UD-Q4_K_XL.gguf",
+      "role": "application security review",
+      "server_id": "expert-5-gemma-securite",
+      "family": "Gemma",
+      "reasoning": false
+    },
+    {
+      "id": "expert-6",
+      "gpu": 6,
+      "card_group": 1,
+      "file": "Qwen3-4B-Instruct-2507-UD-Q4_K_XL.gguf",
+      "role": "debugging and root cause analysis",
+      "server_id": "expert-6-debug",
+      "family": "Qwen",
+      "reasoning": false
+    },
+    {
+      "id": "expert-7",
+      "gpu": 7,
+      "card_group": 1,
+      "file": "Phi-4-mini-instruct-Q4_K_M.gguf",
+      "role": "tests and edge cases",
+      "server_id": "expert-7-phi-tests",
+      "family": "Phi",
+      "reasoning": false
+    },
+    {
+      "id": "expert-8",
+      "gpu": 8,
+      "card_group": 2,
+      "file": "NVIDIA-Nemotron3-Nano-4B-Q4_K_M.gguf",
+      "role": "distributed systems",
+      "server_id": "expert-8-nemotron-systemes-distribues",
+      "family": "Nemotron",
+      "reasoning": false
+    },
+    {
+      "id": "expert-9",
+      "gpu": 9,
+      "card_group": 2,
+      "file": "Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
+      "role": "APIs and protocol design",
+      "server_id": "expert-9-mistral-api",
+      "family": "Mistral",
+      "reasoning": false
+    },
+    {
+      "id": "expert-10",
+      "gpu": 10,
+      "card_group": 2,
+      "file": "gemma-3-4b-it-UD-Q4_K_XL.gguf",
+      "role": "performance and capacity planning",
+      "server_id": "expert-10-gemma-performance",
+      "family": "Gemma",
+      "reasoning": false
+    },
+    {
+      "id": "expert-11",
+      "gpu": 11,
+      "card_group": 2,
+      "file": "granite-4.0-h-tiny-Q4_K_M.gguf",
+      "role": "reliability and observability",
+      "server_id": "expert-11-granite-fiabilite",
+      "family": "Granite",
+      "reasoning": false
+    },
+    {
+      "id": "expert-12",
+      "gpu": 12,
+      "card_group": 3,
+      "file": "Llama-3.1-8B-Instruct-UD-Q4_K_XL.gguf",
+      "role": "software design review",
+      "server_id": "expert-12-conception",
+      "family": "Llama",
+      "reasoning": false
+    },
+    {
+      "id": "expert-13",
+      "gpu": 13,
+      "card_group": 3,
+      "file": "Phi-4-mini-instruct-Q4_K_M.gguf",
+      "role": "C/C++ and systems programming",
+      "server_id": "expert-13-phi-cpp",
+      "family": "Phi",
+      "reasoning": false
+    },
+    {
+      "id": "expert-14",
+      "gpu": 14,
+      "card_group": 3,
+      "file": "gemma-3-4b-it-UD-Q4_K_XL.gguf",
+      "role": "technical documentation and clarity",
+      "server_id": "expert-14-documentation",
+      "family": "Gemma",
+      "reasoning": false
+    },
+    {
+      "id": "expert-15",
+      "gpu": 15,
+      "card_group": 3,
+      "file": "SynLogic-7B.Q4_K_M.gguf",
+      "role": "algorithms and mathematical checks",
+      "server_id": "expert-15-synlogic-raisonnement",
+      "family": "SynLogic",
+      "reasoning": true
+    },
+    {
+      "id": "expert-16",
+      "gpu": 16,
+      "card_group": 4,
+      "file": "Llama-3.1-8B-Instruct-UD-Q4_K_XL.gguf",
+      "role": "architecture alternatives and tradeoffs",
+      "server_id": "expert-16-architecture-alternatives",
+      "family": "Llama",
+      "reasoning": false
+    },
+    {
+      "id": "expert-17",
+      "gpu": 17,
+      "card_group": 4,
+      "file": "NVIDIA-Nemotron3-Nano-4B-Q4_K_M.gguf",
+      "role": "concurrency and memory safety",
+      "server_id": "expert-17-nemotron-concurrence",
+      "family": "Nemotron",
+      "reasoning": false
+    },
+    {
+      "id": "expert-18",
+      "gpu": 18,
+      "card_group": 4,
+      "file": "Qwen3-4B-Instruct-2507-UD-Q4_K_XL.gguf",
+      "role": "requirements and consistency review",
+      "server_id": "expert-18-qwen-coherence",
+      "family": "Qwen",
+      "reasoning": false
+    },
+    {
+      "id": "expert-19",
+      "gpu": 19,
+      "card_group": 4,
+      "file": "DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf",
+      "role": "independent logical critique",
+      "server_id": "expert-19-critique-logique",
+      "family": "DeepSeek",
+      "reasoning": true
+    },
+    {
+      "id": "expert-20",
+      "gpu": 20,
+      "card_group": 5,
+      "file": "Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
+      "role": "storage and data integrity",
+      "server_id": "expert-20-mistral-stockage",
+      "family": "Mistral",
+      "reasoning": false
+    },
+    {
+      "id": "expert-21",
+      "gpu": 21,
+      "card_group": 5,
+      "file": "DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf",
+      "role": "deployment and containers",
+      "server_id": "expert-21-deepseek-deploiement",
+      "family": "DeepSeek",
+      "reasoning": true
+    },
+    {
+      "id": "expert-22",
+      "gpu": 22,
+      "card_group": 5,
+      "file": "SynLogic-7B.Q4_K_M.gguf",
+      "role": "technical fact checking and uncertainty",
+      "server_id": "expert-22-synlogic-verification",
+      "family": "SynLogic",
+      "reasoning": true
+    },
+    {
+      "id": "expert-23",
+      "gpu": 23,
+      "card_group": 5,
+      "file": "DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf",
+      "role": "adversarial review of proposed solutions",
+      "server_id": "expert-23-deepseek-revue-critique",
+      "family": "DeepSeek",
+      "reasoning": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[Unit]
+Description=Restore configured M10 expert models in Unsloth Studio
+After=network-online.target unsloth-studio.service nvidia-persistenced.service
+Requires=unsloth-studio.service
+PartOf=unsloth-studio.service
+
+[Service]
+Type=oneshot
+User=unsloth
+WorkingDirectory=/home/unsloth/quorum
+ExecStart=/home/unsloth/quorum/venv/bin/python /home/unsloth/quorum/load_experts.py
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=30
+TimeoutStartSec=3600
+
+[Install]
+WantedBy=multi-user.target unsloth-studio.service

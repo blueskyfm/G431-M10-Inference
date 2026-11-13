@@ -1,0 +1,172 @@
+{
+  "date": "2026-11-13",
+  "health": {
+    "status": "ok",
+    "loaded_experts": 24,
+    "configured_experts": 24,
+    "experts": [
+      "expert-0",
+      "expert-1",
+      "expert-2",
+      "expert-3",
+      "expert-4",
+      "expert-5",
+      "expert-6",
+      "expert-7",
+      "expert-8",
+      "expert-9",
+      "expert-10",
+      "expert-11",
+      "expert-12",
+      "expert-13",
+      "expert-14",
+      "expert-15",
+      "expert-16",
+      "expert-17",
+      "expert-18",
+      "expert-19",
+      "expert-20",
+      "expert-21",
+      "expert-22",
+      "expert-23"
+    ],
+    "default_mode": "adaptive",
+    "full_review_model": "quorum-deep"
+  },
+  "placement": {
+    "runtime_count": 24,
+    "unique_gpus": 24,
+    "runtimes": [
+      {
+        "gpu": "0",
+        "model": "expert-0-architecture.gguf"
+      },
+      {
+        "gpu": "1",
+        "model": "expert-1-phi-python.gguf"
+      },
+      {
+        "gpu": "2",
+        "model": "expert-2-mistral-linux.gguf"
+      },
+      {
+        "gpu": "3",
+        "model": "expert-3-llama-reseau.gguf"
+      },
+      {
+        "gpu": "4",
+        "model": "expert-4-granite-bases-donnees.gguf"
+      },
+      {
+        "gpu": "5",
+        "model": "expert-5-gemma-securite.gguf"
+      },
+      {
+        "gpu": "6",
+        "model": "expert-6-debug.gguf"
+      },
+      {
+        "gpu": "7",
+        "model": "expert-7-phi-tests.gguf"
+      },
+      {
+        "gpu": "8",
+        "model": "expert-8-nemotron-systemes-distribues.gguf"
+      },
+      {
+        "gpu": "9",
+        "model": "expert-9-mistral-api.gguf"
+      },
+      {
+        "gpu": "10",
+        "model": "expert-10-gemma-performance.gguf"
+      },
+      {
+        "gpu": "11",
+        "model": "expert-11-granite-fiabilite.gguf"
+      },
+      {
+        "gpu": "12",
+        "model": "expert-12-conception.gguf"
+      },
+      {
+        "gpu": "13",
+        "model": "expert-13-phi-cpp.gguf"
+      },
+      {
+        "gpu": "14",
+        "model": "expert-14-documentation.gguf"
+      },
+      {
+        "gpu": "15",
+        "model": "expert-15-synlogic-raisonnement.gguf"
+      },
+      {
+        "gpu": "16",
+        "model": "expert-16-architecture-alternatives.gguf"
+      },
+      {
+        "gpu": "17",
+        "model": "expert-17-nemotron-concurrence.gguf"
+      },
+      {
+        "gpu": "18",
+        "model": "expert-18-qwen-coherence.gguf"
+      },
+      {
+        "gpu": "19",
+        "model": "expert-19-critique-logique.gguf"
+      },
+      {
+        "gpu": "20",
+        "model": "expert-20-mistral-stockage.gguf"
+      },
+      {
+        "gpu": "21",
+        "model": "expert-21-deepseek-deploiement.gguf"
+      },
+      {
+        "gpu": "22",
+        "model": "expert-22-synlogic-verification.gguf"
+      },
+      {
+        "gpu": "23",
+        "model": "expert-23-deepseek-revue-critique.gguf"
+      }
+    ]
+  },
+  "runtime": {
+    "llama_server": "0.9.0-dev",
+    "commit": "5f490d7",
+    "cuda_libraries": "12.6",
+    "unsloth_studio": "0.1.917-beta",
+    "nvidia_driver": "580.178.04",
+    "context_tokens": 8192
+  },
+  "model_variants": 9,
+  "short_budget_individual_test": {
+    "HTTP_success": 24,
+    "exact_answer_4": 17,
+    "correct_with_extra_formatting": 2,
+    "reasoning_without_final_answer": 5,
+    "note": "Not an accuracy benchmark; thinking and token budgets matter."
+  },
+  "full_24_review": {
+    "prompt": "Combien fait 8/4 ? R\u00e9ponds uniquement avec le nombre.",
+    "answer": "2",
+    "usable_reviews": 24,
+    "elapsed_s": 36.38,
+    "review_s": 28.01,
+    "synthesis_s": 7.55
+  },
+  "short_technical_review": {
+    "topic": "SQL injection and parameters, short explanation",
+    "reviewers": 3,
+    "elapsed_s": 28.82,
+    "review_s": 10.67,
+    "synthesis_s": 18.11
+  },
+  "cold_boot_restoration_tested": false,
+  "native_unsloth_training_tested": false,
+  "quality_benchmark_performed": false
+}

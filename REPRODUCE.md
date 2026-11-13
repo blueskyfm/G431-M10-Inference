@@ -1,6 +1,6 @@
 # Reproduce the module-level experiment
 
-This guide covers building and emulating one modified PciBus module. It does not build a flashable RBU. Only four physical M10 cards have been reported booting after the experimental firmware change.
+This guide covers building and emulating one modified PciBus module. It does not build a flashable RBU. It is stage 1 of the [overall inference project](README.md#from-boot-to-inference). The latest verified running configuration is six cards / 24 GPUs; see [current results](TEST_RESULTS.md). This guide reproduces selected module-level behavior, not the complete boot or serving deployment.
 
 ## Inputs and tools
 

@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-13",
+  "client": "OpenCode 2.3.0",
+  "profile": "isolated M10 dialogue profile",
+  "api_model": "quorum-fast",
+  "prompt": "Combien fait 2/2 ?",
+  "response": "1",
+  "existing_other_provider_and_defaults_preserved": true,
+  "tools_validated": false,
+  "native_unsloth_training_validated": false
+}

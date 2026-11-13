@@ -25,6 +25,7 @@ All 24 devices in the six-card configuration passed context creation, allocation
 
 The serving deployment subsequently had 24 resident runtimes pinned to 24 distinct GPU IDs. The four new model downloads have recorded source repositories and SHA-256 hashes.
 
+- [Live nvidia-smi image](software/evidence/nvidia-smi-2026-11-13.png) and [unmodified text](software/evidence/nvidia-smi-2026-11-13.txt), captured 2026-11-13 at 16:17:46 UTC
 - [Hardware summary](software/evidence/hardware-2026-11-13.json)
 - [Serving state, runtime versions and placement](software/evidence/serving-2026-11-13.json)
 - [Model download provenance](software/evidence/model-downloads.json)

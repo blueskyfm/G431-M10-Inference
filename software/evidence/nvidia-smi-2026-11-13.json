@@ -1,0 +1,9 @@
+{
+  "captured_at_utc": "2026-11-13T16:17:46Z",
+  "command": "LC_ALL=C nvidia-smi",
+  "exit_status": 0,
+  "presentation": "Unmodified stdout captured over SSH and rendered as a terminal-style browser screenshot; not a BMC console screenshot.",
+  "raw_output": "nvidia-smi-2026-11-13.txt",
+  "image": "nvidia-smi-2026-11-13.png",
+  "scope": "Point-in-time GPU and process state; not a sustained-load benchmark."
+}

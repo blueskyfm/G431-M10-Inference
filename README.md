@@ -36,6 +36,15 @@ A Tesla M10 contains four independent GPUs with 8 GiB each. Six cards expose 24 
 
 Ten cards looped at POST 70 before Linux. Power cabling and PCI resource allocation remain hypotheses. In particular, the low-MMIO window observed with six cards is smaller than the BAR0 allocations that 40 GPUs would require, but firmware behavior with ten cards has not been established. See [hardware evidence](software/docs/HARDWARE_VALIDATION.md).
 
+<details>
+<summary>Live nvidia-smi capture: all 24 GPUs and their resident processes</summary>
+
+![nvidia-smi showing 24 Tesla M10 GPUs and resident llama-server processes](software/evidence/nvidia-smi-2026-11-13.png)
+
+Captured over SSH on 2026-11-13 at 16:17:46 UTC. The image renders the unmodified command output; [raw text](software/evidence/nvidia-smi-2026-11-13.txt) and [capture metadata](software/evidence/nvidia-smi-2026-11-13.json) are retained. This is an idle-state snapshot, not a load test. The CUDA version in nvidia-smi is the driver's supported version, not the CUDA library version used by the inference runtime.
+
+</details>
+
 ## 3. Inference: using the available GPUs
 
 The serving layer uses Unsloth Studio to manage llama.cpp GGUF inference. It runs 24 GPU-pinned instances with nine model variants and named review roles. Roles are system instructions, not specialist fine-tuning. This project does not demonstrate native Unsloth training on Maxwell.

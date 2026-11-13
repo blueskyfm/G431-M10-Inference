@@ -1,0 +1,70 @@
+[
+  {
+    "repo": "mradermacher/SynLogic-7B-GGUF",
+    "files": [
+      {
+        "type": "file",
+        "oid": "95d40aec5437e163c06c6d18dbf58ae0047114a2",
+        "size": 4683074304,
+        "lfs": {
+          "oid": "83d30a583927071366ec45528dbb96c35f75255eba15a86c64472874c9f0c182",
+          "size": 4683074304,
+          "pointerSize": 135
+        },
+        "xetHash": "bf21eea066cd7d951c42e1ed2518b3a51494a9ef91fd86b59ad13b107ab0a2c7",
+        "path": "SynLogic-7B.Q4_K_M.gguf"
+      }
+    ]
+  },
+  {
+    "repo": "unsloth/Phi-4-mini-instruct-GGUF",
+    "files": [
+      {
+        "type": "file",
+        "oid": "c00cff5034a6ea8c0625af7b108bb7253c966937",
+        "size": 2491874272,
+        "lfs": {
+          "oid": "88c00229914083cd112853aab84ed51b87bdf6b9ce42f532d8c85c7c63b1730a",
+          "size": 2491874272,
+          "pointerSize": 135
+        },
+        "xetHash": "a76437bf7f769e2366be97a14d1fdd2163f5a49838764ea6834e427102b3ffa0",
+        "path": "Phi-4-mini-instruct-Q4_K_M.gguf"
+      }
+    ]
+  },
+  {
+    "repo": "ibm-granite/granite-4.0-h-tiny-GGUF",
+    "files": [
+      {
+        "type": "file",
+        "oid": "876ddafdf21bb71a417cb713d33ba79232a46347",
+        "size": 4230976352,
+        "lfs": {
+          "oid": "5a38b08c441ae1adbafb1d2b8a7167e0d48734d83af68b268cefea1eec553dcd",
+          "size": 4230976352,
+          "pointerSize": 135
+        },
+        "xetHash": "4e639bc6f768c6ef6853ec9936ab018a24f2edc76739466220d4bd783ca257d8",
+        "path": "granite-4.0-h-tiny-Q4_K_M.gguf"
+      }
+    ]
+  },
+  {
+    "repo": "nvidia/NVIDIA-Nemotron-3-Nano-4B-GGUF",
+    "files": [
+      {
+        "type": "file",
+        "oid": "8ff027360bc5cf04a857dd5cb0c20831e3ba1f24",
+        "size": 2837072864,
+        "lfs": {
+          "oid": "be5d9a656a51922f24f1f09a759cebb694e1f5d9728bf0ef9f8c972c5a0b5ef2",
+          "size": 2837072864,
+          "pointerSize": 135
+        },
+        "xetHash": "fc9a09a10af8d2b715bcd84a02f686733b48eadf6ffcd409b3119b5d59e0e71a",
+        "path": "NVIDIA-Nemotron3-Nano-4B-Q4_K_M.gguf"
+      }
+    ]
+  }
+]

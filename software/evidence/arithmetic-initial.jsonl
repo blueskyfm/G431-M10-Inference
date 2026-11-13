@@ -1,0 +1,3 @@
+{"run": 1, "elapsed_s": 11.343, "content": "1", "meta": {"mode": "direct", "candidates": 1, "experts_total": 10, "selected_experts": ["expert-0"], "roles": ["technical lead and architecture"], "elapsed_s": 11.33}}
+{"run": 2, "elapsed_s": 0.361, "content": "1", "meta": {"mode": "direct", "candidates": 1, "experts_total": 11, "selected_experts": ["expert-0"], "roles": ["technical lead and architecture"], "elapsed_s": 0.36}}
+{"run": 3, "elapsed_s": 0.333, "content": "1", "meta": {"mode": "direct", "candidates": 1, "experts_total": 11, "selected_experts": ["expert-0"], "roles": ["technical lead and architecture"], "elapsed_s": 0.33}}

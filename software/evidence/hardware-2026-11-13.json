@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-13",
+  "physical_cards": 6,
+  "cuda_devices": 24,
+  "vram_per_device_mib": 8192,
+  "driver": "580.178.04",
+  "kernel": "7.0.0-43-generic",
+  "bios_label": "F10 experimental",
+  "cuda_memory_copy": {
+    "bytes_per_device": 1048576,
+    "devices_passed": 24,
+    "exit_code": 0,
+    "compute_kernel_tested": false
+  },
+  "mmio32_window": {
+    "start": "0xd2000000",
+    "end": "0xefffffff",
+    "size_mib": 480
+  },
+  "bar0_per_gpu_mib": 16,
+  "bar0_24_gpu_mib": 384,
+  "bar0_40_gpu_required_mib": 640,
+  "ten_card_boot": "failed at POST code 70; root cause unproven",
+  "large_163gb_model": "not tested"
+}

@@ -1,0 +1,18 @@
+# Template: replace <USER> and review all paths before installing.
+[Unit]
+Description=M10 adaptive expert API
+After=network.target unsloth-studio.service
+
+[Service]
+User=<USER>
+WorkingDirectory=/home/<USER>/quorum
+Environment=QUORUM_STUDIO=http://127.0.0.1:8888
+Environment=QUORUM_KEY_FILE=/home/<USER>/unsloth-m10/credentials/api-key.txt
+Environment=QUORUM_FANOUT_TIMEOUT=180
+Environment=QUORUM_PORT=9000
+ExecStart=/home/<USER>/quorum/venv/bin/python /home/<USER>/quorum/aggregator.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

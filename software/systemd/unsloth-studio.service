@@ -1,0 +1,16 @@
+# Template — replace <USER> with your unix username, adjust paths if needed.
+# Install: sudo cp unsloth-studio.service /etc/systemd/system/
+#          sudo systemctl daemon-reload && sudo systemctl enable --now unsloth-studio
+[Unit]
+Description=Unsloth Studio (GGUF inference server + web UI)
+After=network.target nvidia-persistenced.service
+
+[Service]
+User=<USER>
+WorkingDirectory=/home/<USER>/studio-home
+ExecStart=/home/<USER>/studio-home/unsloth_studio/bin/unsloth studio -H 0.0.0.0 -p 8888
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

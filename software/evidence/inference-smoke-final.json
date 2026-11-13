@@ -1,0 +1,242 @@
+[
+  {
+    "id": "expert-0",
+    "family": "Qwen",
+    "gpu": 0,
+    "content": "4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 2.35,
+    "status": "answer"
+  },
+  {
+    "id": "expert-1",
+    "family": "Phi",
+    "gpu": 1,
+    "content": "4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 1.88,
+    "status": "answer"
+  },
+  {
+    "id": "expert-2",
+    "family": "Mistral",
+    "gpu": 2,
+    "content": " 4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 4.85,
+    "status": "answer"
+  },
+  {
+    "id": "expert-3",
+    "family": "Llama",
+    "gpu": 3,
+    "content": "4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 4.76,
+    "status": "answer"
+  },
+  {
+    "id": "expert-4",
+    "family": "Granite",
+    "gpu": 4,
+    "content": "4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 1.76,
+    "status": "answer"
+  },
+  {
+    "id": "expert-5",
+    "family": "Gemma",
+    "gpu": 5,
+    "content": "4\n",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 2.62,
+    "status": "answer"
+  },
+  {
+    "id": "expert-6",
+    "family": "Qwen",
+    "gpu": 6,
+    "content": "4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 2.42,
+    "status": "answer"
+  },
+  {
+    "id": "expert-7",
+    "family": "Phi",
+    "gpu": 7,
+    "content": "4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 2.11,
+    "status": "answer"
+  },
+  {
+    "id": "expert-8",
+    "family": "Nemotron",
+    "gpu": 8,
+    "content": "",
+    "answer": "",
+    "finish_reason": "length",
+    "elapsed_s": 7.44,
+    "status": "generated_without_exact_answer"
+  },
+  {
+    "id": "expert-9",
+    "family": "Mistral",
+    "gpu": 9,
+    "content": " 4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 6.31,
+    "status": "answer"
+  },
+  {
+    "id": "expert-10",
+    "family": "Gemma",
+    "gpu": 10,
+    "content": "4\n",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 3.43,
+    "status": "answer"
+  },
+  {
+    "id": "expert-11",
+    "family": "Granite",
+    "gpu": 11,
+    "content": "4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 3.84,
+    "status": "answer"
+  },
+  {
+    "id": "expert-12",
+    "family": "Llama",
+    "gpu": 12,
+    "content": "4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 4.1,
+    "status": "answer"
+  },
+  {
+    "id": "expert-13",
+    "family": "Phi",
+    "gpu": 13,
+    "content": "4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 2.04,
+    "status": "answer"
+  },
+  {
+    "id": "expert-14",
+    "family": "Gemma",
+    "gpu": 14,
+    "content": "4\n",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 2.32,
+    "status": "answer"
+  },
+  {
+    "id": "expert-15",
+    "family": "SynLogic",
+    "gpu": 15,
+    "content": "2 + 2 = 4",
+    "answer": "2 + 2 = 4",
+    "finish_reason": "stop",
+    "elapsed_s": 5.17,
+    "status": "generated_without_exact_answer"
+  },
+  {
+    "id": "expert-16",
+    "family": "Llama",
+    "gpu": 16,
+    "content": "4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 5.55,
+    "status": "answer"
+  },
+  {
+    "id": "expert-17",
+    "family": "Nemotron",
+    "gpu": 17,
+    "content": "",
+    "answer": "",
+    "finish_reason": "length",
+    "elapsed_s": 6.9,
+    "status": "generated_without_exact_answer"
+  },
+  {
+    "id": "expert-18",
+    "family": "Qwen",
+    "gpu": 18,
+    "content": "4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 3.74,
+    "status": "answer"
+  },
+  {
+    "id": "expert-19",
+    "family": "DeepSeek",
+    "gpu": 19,
+    "content": "<think>\nOkay, so I need to figure out what 2 plus 2 is. Hmm, I remember from when I was a kid that addition is one of the first math operations we learn. Let me think about how addition works. When you add two numbers together, you're basically combining their quantities. So, if I have two apples and someone gives me two more apples, how many apples do I have in total? That should be four apples. \n\nWait, but I want to make sure I'm not making a mistake here. Sometimes I confuse addition with multiplication. Multiplication is when you have groups of the same size, right? Like 2 times 2 is 4, but that's different from adding 2 and 2. So, in this case, since it's addition, it's just combining the two quantities. \n\nI can also visualize it on my fingers. If I hold up two fingers on one hand and two</think>",
+    "answer": "",
+    "finish_reason": "length",
+    "elapsed_s": 39.92,
+    "status": "generated_without_exact_answer"
+  },
+  {
+    "id": "expert-20",
+    "family": "Mistral",
+    "gpu": 20,
+    "content": " 4",
+    "answer": "4",
+    "finish_reason": "stop",
+    "elapsed_s": 4.0,
+    "status": "answer"
+  },
+  {
+    "id": "expert-21",
+    "family": "DeepSeek",
+    "gpu": 21,
+    "content": "<think>\nOkay, so I need to figure out what 2 plus 2 is. Hmm, that's a pretty straightforward math problem. I remember learning in school that addition is combining two numbers together. So, if I have two apples and someone gives me two more apples, how many apples do I have in total? That should be four apples. \n\nWait, let me make sure I'm not mixing up any numbers here. Sometimes I get confused between 2 and 3, but in this case, it's definitely 2. So, adding them together, 2 plus 2 equals 4. Yeah, that makes sense. I don't think there's any trick or anything here; it's just a simple addition problem. \n\nI guess another way to think about it is using fingers. If I hold up two fingers on one hand and two on the other, how many fingers am I holding up? That's four fingers in total</think>",
+    "answer": "",
+    "finish_reason": "length",
+    "elapsed_s": 40.34,
+    "status": "generated_without_exact_answer"
+  },
+  {
+    "id": "expert-22",
+    "family": "SynLogic",
+    "gpu": 22,
+    "content": "2 + 2 = 4",
+    "answer": "2 + 2 = 4",
+    "finish_reason": "stop",
+    "elapsed_s": 4.69,
+    "status": "generated_without_exact_answer"
+  },
+  {
+    "id": "expert-23",
+    "family": "DeepSeek",
+    "gpu": 23,
+    "content": "<think>\nOkay, so I need to figure out what 2 plus 2 is. Hmm, that seems pretty straightforward, but let me think through it carefully to make sure I'm not missing anything. \n\nFirst, I know that addition is one of the basic arithmetic operations. When you add two numbers together, you're combining their values. So in this case, I'm combining 2 and another 2. \n\nLet me visualize it. If I have two apples and someone gives me two more apples, how many apples do I have in total? I would have four apples. That makes sense because 2 plus 2 equals 4. \n\nWait, but sometimes people might confuse this with multiplication or something else. No, in this case, it's definitely addition. Multiplication would be 2 times 2, which is 4 as well, but that's a different operation. \n\nI could also think about it on a number line</think>",
+    "answer": "",
+    "finish_reason": "length",
+    "elapsed_s": 40.53,
+    "status": "generated_without_exact_answer"
+  }
+]

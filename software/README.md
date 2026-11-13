@@ -1,6 +1,8 @@
 # M10 expert serving with Unsloth Studio
 
-A reproducible, experimental deployment on a GIGABYTE G431-MM0-OT: six Tesla M10 cards, 24 independent 8 GiB GPUs, named local GGUF experts and one OpenAI-compatible API. Unsloth Studio manages the llama.cpp inference runtimes; this is **not native Unsloth training on Maxwell**.
+This is stage 3 of [G431-M10-Inference](../README.md#from-boot-to-inference): using the GPUs made available by the hardware deployment. The firmware experiment and CUDA checks are documented separately; [TEST_RESULTS.md](../TEST_RESULTS.md) indexes evidence across all three stages. This serving layer does not itself fix PCI enumeration or establish the cause of a boot failure.
+
+An experimental deployment on a GIGABYTE G431-MM0-OT: six Tesla M10 cards, 24 independent 8 GiB GPUs, named local GGUF experts and one OpenAI-compatible API. Unsloth Studio manages the llama.cpp inference runtimes; this is **not native Unsloth training on Maxwell**.
 
 Hardware enumeration and CUDA-memory-copy validation are recorded in [hardware validation](docs/HARDWARE_VALIDATION.md). Read [contributions and prior art](docs/CONTRIBUTIONS.md) before making novelty or performance claims. The related firmware experiment is documented in [G431-M10-Inference](https://github.com/blueskyfm/G431-M10-Inference).
 

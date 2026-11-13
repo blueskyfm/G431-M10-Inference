@@ -1,38 +1,64 @@
-# G431-MM0 + Tesla M10: PCI BAR5 firmware experiment
+# G431-M10-Inference
 
-> **Experimental result, not an official GIGABYTE BIOS.** On 2026-11-13, six physical M10 cards booted and Linux/NVIDIA enumerated 24 GPU devices; all passed a basic CUDA memory-copy check. Ten cards looped at POST code 70. The cause of that failure is unresolved; power cabling and PCI resources remain hypotheses.
+An experimental project to turn a GIGABYTE G431-MM0-OT and NVIDIA Tesla M10 cards into a local inference server: investigate firmware boot limits, validate the GPUs, and serve multiple GGUF models through one API.
+
+**Current verified deployment: six M10 cards, 24 independent 8 GiB GPUs, and 24 loaded model instances using nine model variants.** Ten cards failed before Linux at POST code 70; that configuration is not validated. The firmware image labeled F10 is experimental, not an official GIGABYTE release.
 
 ![GIGABYTE G431-MM0 populated with ten Tesla M10 cards](G431_MM0_Tesla_M10_build.jpeg)
 
-This project documents a low-cost inference host built from a GIGABYTE G431-MM0-OT and Tesla M10 cards. The photo shows ten cards physically installed; the latest verified post-change boot is six cards, not ten.
+*The photo shows ten cards physically installed. The verified running configuration has six cards.*
 
-## Background
+## From boot to inference
 
-The system originally ran two or three physical M10 cards. With five cards, POST stopped at “Please wait for chips” and the BMC KVM showed code 70, before Linux started. No defective card was identified.
+The project has three connected stages. A successful boot alone does not prove that CUDA or an inference workload works.
 
-The hardware is a GIGABYTE G431-MM0-OT with MJ11-EC1-OT baseboard. The original BIOS was F09 (2021-09-14); the experimental image reports F10 in Ubuntu, while the BMC firmware page continued to show F09. BMC firmware is 12.61.39.
+| Stage | Work and result | Read next |
+|---|---|---|
+| 1. Firmware and PCI resources | Board-specific AMI PciBus BAR5 experiment; module-level checks pass, but its effect on boot has not been isolated by a controlled comparison | [Patch details](PATCH_DETAILS.md) · [Module reproduction](REPRODUCE.md) |
+| 2. Hardware validation | Six cards enumerate as 24 GPUs; each passed allocation and a 1 MiB CUDA copy-and-compare check | [Results and remaining tests](TEST_RESULTS.md) · [Hardware details](software/docs/HARDWARE_VALIDATION.md) |
+| 3. Model serving | Unsloth Studio manages llama.cpp runtimes, one per GPU; an adaptive expert API exposes them to chat clients and OpenCode | [Software setup and usage](software/README.md) · [OpenCode](software/docs/OPENCODE.md) |
 
-## Experiment
+For the experiment as a whole, start with [results](TEST_RESULTS.md). To use or study the serving layer, start with the [software guide](software/README.md). For a public introduction, see the [community review draft](DISCUSSION_POST.md).
 
-The experiment changes an AMI PciBus PCI resource exception for NVIDIA Tesla M10 PCI ID 10de:13bd, targeting BAR5 (configuration offset 0x24). The goal is to avoid legacy I/O-port resource pressure during firmware PCI enumeration. BAR0/BAR1/BAR3 and the NVIDIA driver are not changed.
+## 1. Firmware: getting past PCI enumeration
 
-The original post-flash report covered four cards and 16 GPU devices. A later six-card boot exposed 24 devices, all of which passed a 1 MiB host/device copy-and-compare check. Selected GGUF inference requests also completed through Unsloth Studio and llama.cpp. Ten cards subsequently failed before Linux at POST 70. These observations are not a controlled original-versus-modified firmware comparison, a sustained-load test or proof of the failure's cause. See [the hardware evidence](software/docs/HARDWARE_VALIDATION.md).
+The hardware is a GIGABYTE G431-MM0-OT with an MJ11-EC1-OT baseboard. The original BIOS was F09 (2021-09-14), with BMC 12.61.39. Two or three physical M10 cards booted; a five-card attempt stopped before Linux with POST code 70.
 
-## Review bundle and acknowledgements
+The experiment adds an AMI PciBus resource exception for NVIDIA PCI ID `10de:13bd`, targeting I/O BAR5 at configuration offset `0x24`. Its purpose is to reduce legacy I/O-resource pressure during PCI enumeration. BAR0/BAR1/BAR3 and the NVIDIA driver are not changed.
 
-- [Download the English review bundle](G431_M10_GitHub_Review_Package_EN.zip) — patch-builder, synthetic checks, verification results, and supporting notes; it does not contain a ready-to-flash RBU.
-- [Read the community review draft](DISCUSSION_POST.md).
-- The work was inspired by [crgregersen's m10dis project](https://github.com/crgregersen/m10dis). Thank you for documenting the Tesla M10 and BAR5 so clearly. This GIGABYTE firmware experiment is independent and is not endorsed by that project.
-- The cards were found through [this eBay France listing](https://www.ebay.fr/itm/880037037060?chn=ps&norover=1&mkevt=1&mkrid=709-134431-41854-0&mkcid=2&mkscid=101&itemid=880037037060&targetid=2501626380638&device=m&mktype=pla&googleloc=9219961&poi=&campaignid=24236806942&mkgroupid=200469000416&rlsatarget=pla-2501626380638&abcId=10823391&merchantid=6995724&gad_source=1&gad_campaignid=24236806942&gbraid=0AAAAACadmUl68qTjSAJJBUjnD2wQGHmCx&gclid=EAIaIQobChMIgqXd_ZyCmAMVjrVoCR0UXhl0EAQYAiABEgL0-_D_BwE), at about €85 per card when checked; the listing and price may change.
+The original post-change report covered four cards and 16 GPU devices. Later testing reached six cards and 24 GPUs. These observations do not establish that the patch alone enabled the additional cards. The supplied experimental module passes 23 exception-emulation scenarios and eight caller-emulation scenarios. See [patch details](PATCH_DETAILS.md) for exactly what those synthetic tests exercise.
 
-The current serving deployment runs 24 independent GGUF experts using nine model variants, each on its own 8 GiB GPU. All 24 contributed usable reviews in a functional ensemble test. Retained timings describe specific requests, not a general quality or throughput benchmark.
+The [firmware review bundle](G431_M10_GitHub_Review_Package_EN.zip) contains the patch-builder, archived synthetic results and historical notes. It is a firmware-specific archive; the current deployment state is documented in this repository's [results](TEST_RESULTS.md). It contains no ready-to-flash RBU.
 
-## Safety and scope
+## 2. Hardware: verifying the usable GPUs
 
-This is an unofficial experiment on one server. A full RBU made from a system dump is intentionally excluded because it may contain machine-specific data and redistribution rights for GIGABYTE firmware are unclear. Do not flash this experiment on another board or use someone else's system dump. Keep a known-good recovery path.
+A Tesla M10 contains four independent GPUs with 8 GiB each. Six cards expose 24 devices, rather than six unified 32 GiB GPUs. All 24 passed a basic CUDA memory-copy test; this is distinct from sustained compute or thermal validation.
 
-## Unsloth Studio and the expert API
+Ten cards looped at POST 70 before Linux. Power cabling and PCI resource allocation remain hypotheses. In particular, the low-MMIO window observed with six cards is smaller than the BAR0 allocations that 40 GPUs would require, but firmware behavior with ten cards has not been established. See [hardware evidence](software/docs/HARDWARE_VALIDATION.md).
 
-The [software directory](software/README.md) contains the expert-serving code, model/role manifest, startup units, OpenCode instructions, regression checks and measured limitations. Studio is the control plane; GGUF inference runs in llama.cpp. Native Unsloth training on M10 was not demonstrated. Read [contributions and prior art](software/docs/CONTRIBUTIONS.md) for the scope of the contribution.
+## 3. Inference: using the available GPUs
 
-The public bundle includes the patch-builder and synthetic tests, not a certified firmware image. It is not proof that ten cards will boot or that inference workloads will be stable. Feedback and careful review are welcome before further tests.
+The serving layer uses Unsloth Studio to manage llama.cpp GGUF inference. It runs 24 GPU-pinned instances with nine model variants and named review roles. Roles are system instructions, not specialist fine-tuning. This project does not demonstrate native Unsloth training on Maxwell.
+
+One OpenAI-compatible endpoint exposes:
+
+- `quorum-fast`: one selected expert for interactive dialogue.
+- `quorum`: heuristic selection of one expert or a small technical review panel, followed by synthesis when needed.
+- `quorum-deep`: all loaded experts followed by synthesis, with higher latency.
+- `expert-N`: direct access to an individual expert and its role.
+
+A full-pool arithmetic test obtained 24 usable reviews and returned the correct result in 36.38 s. This verifies the serving path, not superior ensemble accuracy. The [software guide](software/README.md) includes setup, model placement, evidence and measured limitations.
+
+## Contributions and prior work
+
+The useful contribution is the documented combination of a board-specific firmware experiment, hardware checks and a working expert-serving deployment. M10 inference, multi-GPU splitting and model ensembles already exist; no worldwide-first claim is made. See [contributions and prior art](software/docs/CONTRIBUTIONS.md).
+
+The firmware investigation was inspired by [crgregersen/m10dis](https://github.com/crgregersen/m10dis), particularly its M10 BAR5 analysis. Existing legacy-GPU inference work includes [h3rb3rn/llama.cpp-legacy-gpu](https://github.com/h3rb3rn/llama.cpp-legacy-gpu). This project is independent and is not endorsed by those projects.
+
+## Remaining work and community review
+
+The next useful contributions are controlled original-versus-modified firmware comparisons, investigation of the ten-card POST failure, a cold-boot check of model restoration, sustained-load validation, and accuracy/latency comparisons between a single model and the expert panel. A 163 GB model has not been tested here.
+
+Use [collect_diagnostics.sh](collect_diagnostics.sh) for successfully booted configurations, review its output before sharing, and include card count, slot layout, firmware/module hashes, kernel and driver versions. For failures before Linux, retain the POST code and KVM message. The [results page](TEST_RESULTS.md) distinguishes completed checks from open questions.
+
+The firmware experiment is specific to one server. Full machine-specific BIOS dumps, credentials and model weights are excluded. Firmware reintegration and recovery are outside the module-level reproduction guide; a generated PE module is not a flashable BIOS image.
